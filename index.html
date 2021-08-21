@@ -12,11 +12,14 @@
     />
   </head>
   <body>
+    <!-- main section of website starts here -->
     <main class="md:container mx-auto mt-5">
+      <!-- left side of the column -->
       <div class="grid grid-cols-2 gap-4">
-        <div class="grid justify-items-end">
+        <div class="grid justify-items-end mr-8">
           <img class="object-scale-down h-72" src="mac.png" alt="" />
         </div>
+        <!-- right side of the column -->
         <div class="w-5/6">
           <div>
             <h1 class="text-3xl mb-4">
@@ -30,86 +33,175 @@
               Mouse Magic Keyboard US English
             </p>
           </div>
+          <!-- section for the memory purchase options -->
           <div class="mb-8">
             <h1>Memory</h1>
-            <div class="border w-max p-2 rounded inline-block">
+            <div
+              class="
+                border
+                w-max
+                p-2
+                rounded
+                inline-block
+                bg-red-500
+                hover:bg-red-700
+                text-white
+              "
+            >
               <button id="8GB-memory">8GB Unified Memory</button>
             </div>
-            <div class="border w-max p-2 rounded inline-block">
+            <div
+              class="
+                border
+                w-max
+                p-2
+                rounded
+                inline-block
+                bg-red-500
+                hover:bg-red-700
+                text-white
+              "
+            >
               <button id="16GB-memory">16GB Unified Memory</button>
             </div>
           </div>
+          <!-- Section for the storage purchase options -->
           <div class="mb-8">
             <h1>Storage</h1>
-            <div class="border w-max p-2 rounded inline-block">
+            <div
+              class="
+                border
+                w-max
+                p-2
+                rounded
+                inline-block
+                bg-red-500
+                hover:bg-red-700
+                text-white
+              "
+            >
               <button id="256GB-storage">256GB SSD Storage</button>
             </div>
-            <div class="border w-max p-2 rounded inline-block">
+            <div
+              class="
+                border
+                w-max
+                p-2
+                rounded
+                inline-block
+                bg-red-500
+                hover:bg-red-700
+                text-white
+              "
+            >
               <button id="512GB-storage">512GB SSD Storage</button>
             </div>
-            <div class="border w-max p-2 rounded inline-block">
+            <div
+              class="
+                border
+                w-max
+                p-2
+                rounded
+                inline-block
+                bg-red-500
+                hover:bg-red-700
+                text-white
+              "
+            >
               <button id="1TB-storage">1TB SSD Storage</button>
             </div>
           </div>
+          <!-- section for the delivery options -->
           <div class="mb-16">
             <h1>Choose your delivery option</h1>
-            <div class="border w-max p-2 rounded inline-block">
+            <div
+              class="
+                border
+                w-max
+                p-2
+                rounded
+                inline-block
+                bg-red-500
+                hover:bg-red-700
+                text-white
+              "
+            >
               <button id="delivery-free">
                 Friday, Aug 25 FREE Prime Delivery
               </button>
             </div>
-            <div class="border w-max p-2 rounded inline-block">
+            <div
+              class="
+                border
+                w-max
+                p-2
+                rounded
+                inline-block
+                bg-red-500
+                hover:bg-red-700
+                text-white
+              "
+            >
               <button id="delivery-charged">
                 Friday, Aug 21 Delivery charge $20
               </button>
             </div>
           </div>
-          <div class="divide-y divide-gray-800 w-max mb-8">
+          <!-- section for adding cart item value -->
+          <div class="divide-y divide-gray-800 mb-6 w-52">
             <div>
-              <p>
+              <p class="flex justify-between">
                 Best Price
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                $
-                <span id="base-price">1299</span>
+                <span>$<span id="base-price">1299</span></span>
               </p>
             </div>
             <div>
-              <p>
-                Extra Memory Cost &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $
-                <span id="memory-cost">0</span>
-              </p>
-            </div>
-
-            <div>
-              <p>
-                Extra Storage Cost &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $
-                <span id="storage-cost">0</span>
+              <p class="flex justify-between">
+                Extra Memory Cost
+                <span>$<span id="memory-cost">0</span> </span>
               </p>
             </div>
 
             <div>
-              <p>
-                Delivery Charge &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $
-                <span id="delivery-cost">0</span>
+              <p class="flex justify-between">
+                Extra Storage Cost
+                <span>$<span id="storage-cost">0</span></span>
+              </p>
+            </div>
+
+            <div>
+              <p class="flex justify-between">
+                Delivery Charge <span>$<span id="delivery-cost">0</span></span>
               </p>
             </div>
             <div>
-              <p>
-                Total Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $
-                <span id="total-cost">1299</span>
+              <p class="flex justify-between">
+                Total Price <span>$<span id="total-cost">1299</span></span>
               </p>
             </div>
           </div>
-          <div class="">
+          <!-- Section for applying the promo code -->
+          <div class="mb-4">
+            <p>Add promo code</p>
             <input
-              class="border border-blue-500 focus:border-blue-500"
+              id="input-field"
+              class="pl-2 border border-blue-500 focus:border-blue-500"
               type="text"
             />
-            <button class="bg-red-500 text-white p-4">Apply</button>
+            <button
+              id="coupon-code"
+              class="bg-red-500 text-white p-2 hover:bg-red-700 text-white"
+            >
+              Apply
+            </button>
           </div>
         </div>
       </div>
-      <h1 class="text-center mt-8">Total Price: $ <span>1299</span></h1>
+      <hr />
+      <!-- section to show price after discount -->
+      <h1 class="text-center mt-2 text-3xl">
+        Total: $ <span id="total">1299</span>
+      </h1>
     </main>
     <script src="app.js"></script>
   </body>
